@@ -1,0 +1,236 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+.click{
+    display: none;
+}
+.header{
+    
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to left,rgb(4, 18, 80),rgb(0, 0, 0));
+    height: 10vh;
+    align-items: center;
+}
+.bar{
+    display: none;
+}
+.navbar h1{
+    font-size: 25px;
+    color: white;
+    padding: 10px 20px;
+    transition: 0.5s ease;
+}
+.navbar img{
+    height: 50px;
+}
+.navbar h1:hover{
+    background-color: white;
+    cursor: pointer;
+    color: rgb(2, 2, 2);
+    border-radius: 10px;
+}
+.body-content{
+    position: relative;
+    top: 140px;
+}
+.intro{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.intro p{
+    text-align: justify;
+    font-weight: 600;
+    width: 60%;
+    font-size: 25px;
+    color: white;
+    border-radius: 30px;
+    background-image: linear-gradient(to right,rgb(4, 18, 80),rgb(0, 0, 0));
+    padding: 55px;
+    line-height: 1.5;
+}
+.intro img{
+    
+    height: 600px;
+}
+
+.about-me{
+    margin: 100px 0;
+    text-align: center;
+}
+.about-me h1{
+    margin: 40px 0;
+    padding: 10px 0;
+    background-image: linear-gradient(to right,rgb(4, 18, 80),rgb(0, 0, 0));
+    color: white;
+}
+.about-me p{
+    font-weight: 600;
+    font-size: 25px;
+    position: relative;
+    text-align: justify;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.5;
+}
+
+.projects{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.projects h1{
+    margin: 20px 0;
+    padding: 10px 0;
+    color: white;
+    background-image: linear-gradient(to left,rgb(4, 18, 80),rgb(0, 0, 0));
+}
+.projects img{
+    margin-top: 20px ;
+    height: 320px;
+    width: 510px;
+    transition: 1s ease;
+}
+.projects a{
+    text-decoration: none;
+}
+.pro-imgs h2{
+    color: rgb(0, 60, 128);
+    font-size: 40px;
+    position: relative;
+    font-weight: bolder;
+    top: -180px;
+    opacity: 0;
+    pointer-events: none;
+    
+    
+
+}
+.pro2 h2, .pro3 h2, .pro4 h2{
+    transition: 1s ease;
+}
+.pro-imgs{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom:100px ;
+    
+}
+.pro-imgs img:hover{
+    
+    cursor: pointer;
+    opacity: 0.1;
+}
+.pro1:hover h2, .pro2:hover h2, .pro3:hover h2, .pro4:hover h2{
+    opacity: 1;
+}
+
+.footer{
+    background-image: linear-gradient(to right,rgb(4, 18, 80),rgb(0, 0, 0));
+    height: 100%;
+    position: relative;
+    bottom: 0px;
+    padding: 20px 0;
+}
+.contacts {
+
+    display: flex;
+    justify-content: space-around;
+}
+.contacts p{
+    
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    transition: 1s ease;
+}
+.contacts img{
+    height: 40px;
+    margin-left: 10px;
+}
+.contacts a{
+    display: flex;
+    align-items: center;
+}
+.contacts span:hover p{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 1200px) {
+    .intro{
+        flex-direction: column;
+
+    }
+    .click{
+        display: block;
+    }
+    .intro img{
+        height: 500px;
+    }
+    .intro p{
+        width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .contacts p{
+        display: none;
+    }
+    .intro img{
+        height: 200px;
+    }
+    .navbar a{
+        display: none;
+    }
+    .bar{
+        display: block;
+        width: 70px;
+        
+    }
+    .intro p{
+        font-size: 15px;
+        width: 100%;
+        padding: 20px;
+    }
+    .about-me p{
+        font-size: 15px;
+    }
+    .pro-imgs img{
+        height: 200px;
+        width: 260px;
+    }
+    .pro-imgs h2{
+        font-size: 15px;
+    }
+    .pro-imgs{
+        margin-bottom: 200px;
+    }
+  }
