@@ -29,8 +29,25 @@ a{
     height: 10vh;
     align-items: center;
 }
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    
+}
+#cross{
+    cursor: pointer;
+    display: none;
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 .bar{
     display: none;
+    cursor: pointer;
 }
 .navbar h1{
     font-size: 25px;
@@ -189,6 +206,9 @@ a{
         flex-direction: column;
 
     }
+    .navbar img{
+        margin-left: 20px;
+    }
     .click{
         display: block;
     }
@@ -197,6 +217,10 @@ a{
     }
     .intro p{
         width: 90%;
+    }
+    .links{
+        flex: 1;
+        justify-content: space-around;
     }
   }
 
@@ -207,9 +231,19 @@ a{
     .intro img{
         height: 200px;
     }
-    .navbar a{
+    .links{
         display: none;
+        position: absolute;
+        background-image: linear-gradient(to right,rgb(4, 18, 80),rgb(0, 0, 0));
+        top: 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
+    .links a{
+        text-align: center;
+    }
+    
     .bar{
         display: block;
         width: 70px;
